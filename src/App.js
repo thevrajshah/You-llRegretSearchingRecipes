@@ -50,7 +50,7 @@ const App = () => {
           Search
         </button>
       </form>
-      <h3>Instant Regret Garunteed!</h3>
+      <h3>Instant Regret Garunteed! Calorie Gains are real.</h3>
       <div className="recipes">
         {rescipes.map((recipe) => (
           <Recipe
