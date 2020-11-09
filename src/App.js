@@ -6,7 +6,7 @@ const App = () => {
   const APP_ID = "c191834c";
   const APP_KEY = "d70bd835db29be6d8477eeb75dd3720b";
 
-  const [rescipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("apple");
 
@@ -20,7 +20,6 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data.hits);
   };
 
   const updateSearch = (e) => {
@@ -52,7 +51,7 @@ const App = () => {
       </form>
       <h3>Instant Regret Garunteed! Calorie Gains are real.</h3>
       <div className="recipes">
-        {rescipes.map((recipe) => (
+        {recipes.map((recipe) => (
           <Recipe
             key={recipe.recipe.label}
             title={recipe.recipe.label}
